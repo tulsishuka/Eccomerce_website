@@ -7,7 +7,7 @@ const Navbar = () => {
       <div className="mx-auto flex max-w-7xl items-center justify-between gap-4">
         
         {/* Logo */}
-        <div className="text-2xl font-bold">Exclusive</div>
+      <Link to="/"> <div className="text-2xl font-bold">Shopsy</div> </Link>
 
         {/* Search */}
         <div className="relative hidden flex-1 max-w-md md:block">
@@ -28,7 +28,7 @@ const Navbar = () => {
 
           <Link to="/about">About</Link>
 
-          <Link to="/SignUp">Sign Up</Link>
+          <Link to="/login">Login</Link>
 
           <Link to="/contact">Contact</Link>  {/* ✅ ADDED */}
 
@@ -52,3 +52,7 @@ const Navbar = () => {
 };
 
 export default Navbar;
+
+
+
+

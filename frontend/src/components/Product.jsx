@@ -1,34 +1,58 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
+// const ProductCard = ({ name, image, price }) => (
+//   <div
+//     style={{
+//       border: "2px solid #D33649",
+//       borderRadius: "8px",
+//       padding: "20px",
+//       textAlign: "center",
+//       width: "180px",
+//       height: "240px",
+//       display: "flex",
+//       flexDirection: "column",
+//       justifyContent: "center",
+//       alignItems: "center",
+//     }}
+//   >
+//     <img
+//       src={`http://localhost:3000/${image}`}
+//       alt={name}
+//       style={{
+//         maxWidth: "100%",
+//         maxHeight: "130px",
+//         objectFit: "contain",
+//         marginBottom: "10px",
+//       }}
+//     />
+//     <p>{name}</p>
+//     <p>₹ {price}</p>
+//   </div>
+// );
+
 const ProductCard = ({ name, image, price }) => (
   <div
     style={{
       border: "2px solid #D33649",
-      borderRadius: "8px",
       padding: "20px",
       textAlign: "center",
-      width: "180px",
-      height: "240px",
-      display: "flex",
-      flexDirection: "column",
-      justifyContent: "center",
-      alignItems: "center",
     }}
   >
     <img
-      src={`http://localhost:3000/${image}`}
+      src={image ? image : "https://via.placeholder.com/150"}
       alt={name}
       style={{
-        maxWidth: "100%",
-        maxHeight: "130px",
-        objectFit: "contain",
-        marginBottom: "10px",
+        width: "100%",
+        height: "130px",
+        objectFit: "cover",
       }}
     />
     <p>{name}</p>
     <p>₹ {price}</p>
   </div>
 );
+
+
 
 const Product = () => {
   const [products, setProducts] = useState([]);
